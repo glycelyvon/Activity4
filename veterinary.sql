@@ -163,3 +163,7 @@ VALUES
 UPDATE doctors
 SET phone = '5552-525-5675', email = 'notnewemail@gmail.com'
 WHERE doctorid = 1;
+
+INSERT INTO appointments (appointid, animalid, appointdate, reason)
+VALUES
+(11, 3, '2023-06-10', 'Check for allergies');

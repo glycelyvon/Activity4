@@ -150,3 +150,8 @@ JOIN appointments ap
 GROUP BY a.animalid, a.name
 ORDER BY appointment_count DESC
 LIMIT 1;
+
+UPDATE owners
+SET ofirstname = 'NewFirstName', olastname = 'NewLastName', address = 'NewAddress', 
+    email = 'newemail@example.com', phone = '555-555-5555'
+WHERE ownerid = 1;

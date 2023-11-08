@@ -3,10 +3,9 @@ CREATE DATABASE veterinary;
  CREATE TABLE owners( 
     ownerid INT PRIMARY KEY, 
     ofirstname VARCHAR(50) NOT NULL,
-    phone VARCHAR(15) NOT NULL, 
-    phone VARCHAR(15) NOT NULL,
+    phone VARCHAR(50) NOT NULL, 
     olastname VARCHAR(50) NOT NULL, 
-    address VARCHAR(15) NOT NULL, 
+    address VARCHAR(50) NOT NULL, 
     email VARCHAR(100) NOT NULL );
 
    CREATE TABLE animals(
@@ -177,3 +176,15 @@ UPDATE owners
 SET ofirstname = 'NewFirstName', olastname = 'NewLastName', address = 'NewAddress', 
     email = 'newemail@example.com', phone = '555-555-5555'
 WHERE ownerid = 1;
+
+INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color, ownerid)
+VALUES
+(11, 'Buddy', 'Dog', 'Labrador Retriever', '2021-02-10', 'Male', 'Black', 2);
+
+UPDATE doctors
+SET phone = '5552-525-5675', email = 'notnewemail@gmail.com'
+WHERE doctorid = 1;
+
+INSERT INTO appointments (appointid, animalid, appointdate, reason)
+VALUES
+(11, 3, '2023-06-10', 'Check for allergies');

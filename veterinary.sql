@@ -24,3 +24,13 @@ CREATE TABLE Appointments (
     reason VARCHAR(255),
     FOREIGN KEY (animalid) REFERENCES Animals(animalid)
 );
+
+CREATE TABLE Doctors (
+    doctorid INT PRIMARY KEY,
+    dfirstname VARCHAR(50),
+    dlastname VARCHAR(50),
+    speciality VARCHAR(100),
+    phone VARCHAR(15),
+    email VARCHAR(100)
+);
+
